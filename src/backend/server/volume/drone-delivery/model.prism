@@ -63,3 +63,7 @@ endmodule
 
 label "crashed" = crashed;
 label "all_delivered" = delivered_a & delivered_b & delivered_c;
+label "delivered_A" = delivered_a;
+label "delivered_B" = delivered_b;
+label "delivered_C" = delivered_c;
+label "at_station" = location = 0;

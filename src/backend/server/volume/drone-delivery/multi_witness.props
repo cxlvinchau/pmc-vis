@@ -1,0 +1,2 @@
+"tradeoff": [{"quantifier": "exists", "op": "conjunction", "properties": [{"ltl": "G !\"crashed\""}, {"ltl": "F \"all_delivered\""}], "sense": ">=", "bounds": ["1/2", "1/2"]}];
+"no_charging_multi": [{"quantifier": "exists", "op": "conjunction", "properties": [{"ltl": "!(\"at_station\" & X \"at_station\") U \"delivered_A\""}, {"ltl": "!(\"at_station\" & X \"at_station\") U \"delivered_B\""}], "sense": ">=", "bounds": ["1/2", "1/2"]}];
