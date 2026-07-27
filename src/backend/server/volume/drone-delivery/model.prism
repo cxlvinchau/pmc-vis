@@ -21,7 +21,7 @@ const double fail_full = 0.01;
 const double fail_med = 0.1;
 const double fail_low = 0.2;
 
-module drone
+module drone_battery
     battery : [0..BATTERY_LEVELS] init BATTERY_LEVELS;
 
     [charge] at_base -> (battery'=min(BATTERY_LEVELS, battery+1));

@@ -14,7 +14,7 @@ and carries a probability of crashing that grows as the battery gets weaker.
 
 The model is split across two synchronized modules:
 
-- **`drone`** — tracks the battery level, an integer from `0` to `5`
+- **`drone_battery`** — tracks the battery level, an integer from `0` to `5`
   (starts full at `5`).
 - **`drone_location`** — tracks the drone's location (`Base`, `Target A/B/C`,
   or `Crashed`) and three boolean flags recording whether each target has been
