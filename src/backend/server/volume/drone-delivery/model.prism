@@ -30,7 +30,7 @@ module drone_battery
     [fly_target_c] at_base & battery >= 3 -> (battery'=battery - 3);
     [return] not_at_base & battery >= 1 & location != CRASHED -> (battery'=1);
     // Error state
-    [] not_at_base & battery_empty | (location = CRASHED) -> true;
+    [empty] not_at_base & battery_empty | (location = CRASHED) -> true;
 endmodule
 
 module drone_location

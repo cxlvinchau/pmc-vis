@@ -55,4 +55,4 @@ targets, or the minimum probability of ever crashing, e.g.:
 
     Pmax=? [ F "all_delivered" ]
     Pmin=? [ F "crashed" ]
-    multi(P>=0.5 [F "all_delivered"], P>=0.5 [G !"crashed"])
+    multi(P>=0.5 [F "all_delivered"], P>=0.75 [G !"crashed"])
