@@ -2,7 +2,6 @@
 // The controllable robot is controlled by the policy module
 // The environment robot is controlled by the environment
 // The robots perform their moves in a turn-based manner
-
 // ----------------------------------------------------------------------
 //  Grid layout (shown for the default 3x3 configuration below).
 //  x runs left->right (east = +x), y runs bottom->top (north = +y).
