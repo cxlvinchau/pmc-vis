@@ -2,6 +2,37 @@
 // The controllable robot is controlled by the policy module
 // The environment robot is controlled by the environment
 // The robots perform their moves in a turn-based manner
+
+// ----------------------------------------------------------------------
+//  Grid layout (shown for the default 3x3 configuration below).
+//  x runs left->right (east = +x), y runs bottom->top (north = +y).
+//
+//                    N (north, +y)
+//                    ^
+//                    |
+//           x=0     x=1     x=2
+//         +-------+-------+-------+
+//    y=2  | OBST. | MACH. |  [E]  |
+//         +-------+-------+-------+
+//    y=1  |       |       |       |
+//         +-------+-------+-------+
+//    y=0  |  [C]  |       |       |
+//         +-------+-------+-------+
+//                    |
+//                    v
+//                    S (south, -y)   W = -x   E = +x
+//
+//  Legend:
+//    [C]   = controllable robot, start (x=0, y=0)         -> policy module
+//    [E]   = environment robot,  start (a=WIDTH-1, b=HEIGHT-1) = (2,2)
+//    OBST. = obstacle at (OBSTACLE_X, OBSTACLE_Y) = (0, 2)
+//    MACH. = machine   at (MACHINE_X,  MACHINE_Y)  = (1, 2)
+//
+//  Note: WIDTH/HEIGHT (min 3) and the obstacle/machine positions are
+//  configurable via the constants below; the picture reflects the
+//  defaults. The environment robot always starts in the top-right corner.
+// ----------------------------------------------------------------------
+
 mdp
 
 // Grid dimension, slipping probability, obstacles
